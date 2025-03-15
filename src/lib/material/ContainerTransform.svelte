@@ -18,7 +18,7 @@
 			return;
 		}
 
-		let computed_properties = element.computedStyleMap();
+		let computed_properties = window.getComputedStyle(element);
 		let offset = get_offset(element);
 		let rect = element.getBoundingClientRect();
 
@@ -31,9 +31,9 @@
 		new_element.style.left = `${offset.x}px`;
 		new_element.style.width = `${rect.width}px`;
 		new_element.style.height = `${rect.height}px`;
-		new_element.style.backgroundColor = computed_properties.get('background-color');
-		new_element.style.borderRadius = computed_properties.get('border-radius');
-		new_element.style.opacity = computed_properties.get('opacity');
+		new_element.style.backgroundColor = computed_properties.getPropertyValue('background-color');
+		new_element.style.borderRadius = computed_properties.getPropertyValue('border-radius');
+		new_element.style.opacity = computed_properties.getPropertyValue('opacity');
 
 		transform_container.appendChild(new_element);
 

@@ -70,7 +70,7 @@
 			}
 		});
 
-		internal_element.parentElement?.attributeStyleMap.set(
+		internal_element.parentElement?.style.setProperty(
 			'-webkit-tap-highlight-color',
 			'rgba(0, 0, 0, 0)'
 		);
