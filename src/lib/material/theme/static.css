@@ -1,0 +1,40 @@
+:root {
+    --md-easing-emphasized: var(--md-easing-standard);
+    --md-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1.0);
+    --md-easing-emphasized-accelerate: cubic-bezier(0.3, 0.0, 0.8, 0.15);
+    --md-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+    --md-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
+    --md-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
+
+    --md-duration-short1: 50ms;
+    --md-duration-short2: 100ms;
+    --md-duration-short3: 150ms;
+    --md-duration-short4: 200ms;
+    --md-duration-medium1: 250ms;
+    --md-duration-medium2: 300ms;
+    --md-duration-medium3: 350ms;
+    --md-duration-medium4: 400ms;
+    --md-duration-long1: 450ms;
+    --md-duration-long2: 500ms;
+    --md-duration-long3: 550ms;
+    --md-duration-long4: 600ms;
+    --md-duration-extra-long1: 700ms;
+    --md-duration-extra-long2: 800ms;
+    --md-duration-extra-long3: 900ms;
+    --md-duration-extra-long4: 1000ms;
+
+    --material-generic-fade: var(--md-duration-long4) var(--md-easing-emphasized-decelerate);
+
+    --window-class-compact: 600px;
+    --window-class-medium: 840px;
+    --window-class-expanded: 1200px;
+    --window-class-large: 1600px;
+}
+
+.material-color-fade {
+    transition: color var(--material-generic-fade), background-color var(--material-generic-fade);
+}
+
+body {
+    margin: unset;
+}
