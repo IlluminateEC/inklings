@@ -52,6 +52,8 @@
 			return;
 		}
 
+		internal_element.classList.add('active');
+
 		internal_element.parentElement?.addEventListener('click', (event) => {
 			let rect = get_offset(internal_element);
 
@@ -118,6 +120,11 @@
 		overflow: hidden;
 		--ripple-opacity: 0;
 		cursor: pointer;
+		pointer-events: none;
+	}
+
+	.material-ripple-container:global(.active) {
+		pointer-events: fill;
 	}
 
 	.material-ripple-container::before {
